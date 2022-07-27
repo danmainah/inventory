@@ -36,7 +36,7 @@ function categoryCreate(name, description, cb) {
       return
     }
     console.log('New Category: ' + category);
-    categories.push(author)
+    categories.push(category)
     cb(null, category)
   }  );
 }
