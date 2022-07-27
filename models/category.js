@@ -8,8 +8,8 @@ var CategorySchema = new Schema({
 });
 
 // Virtual for author "full" name.
-CategorySchema.virtual('name').get(function() {
-  return this.name + ', ';
+CategorySchema.virtual('categoryname').get(function() {
+  return this.name;
 });
 
 // Virtual for this author instance URL.

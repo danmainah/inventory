@@ -14,13 +14,11 @@ var async = require('async')
 var Item = require('./models/item')
 var Category = require('./models/category')
 
-
-
-var mongoose = require('mongoose');
-var mongoDB = userArgs[0];
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.Promise = global.Promise;
-var db = mongoose.connection;
+//Set up mongoose connection
+const mongoose = require('mongoose');
+const mongoDB = 'mongodb+srv://odin2022:hL6dd4_25dCDxa@cluster0.yglyc.mongodb.net/?retryWrites=true&w=majority';
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 var categories = []
