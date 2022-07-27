@@ -9,7 +9,7 @@ const category_controller = require('../controllers/categoryController');
 /// item ROUTES ///
 
 // GET catalog home page.
-router.get('/', item_controller.index);
+router.get('/', category_controller.category_list);
 
 // GET request for creating a item. NOTE This must come before routes that display item (uses id).
 router.get('/item/create', item_controller.item_create_get);
